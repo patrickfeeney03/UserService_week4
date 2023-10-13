@@ -9,5 +9,5 @@ import java.util.Map;
 @FeignClient(name = "confirmation-service-1", url = "http://localhost:8082")
 public interface RegistrationServiceClient {
     @PostMapping("/confirm")
-    Map<String, String> someDetails(UserDetails userDetails);
+    Map<String, String> someDetails(@RequestBody UserDetails userDetails);
 }
